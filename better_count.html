@@ -1,0 +1,47 @@
+<body onload="load()">
+    <div id="main">
+
+    </div>
+
+</body>
+<script>
+    function load() {
+        colors = [
+            'lime',
+            'aqua',
+            'orange',
+            'teal',
+            'burlywood',
+            'lightcoral',
+            'darkorchid',
+            'goldenrod'
+        ];
+        for (j = 0; j < 8; j++) {
+            for (i = 0; i < 5; i++) {
+                el = document.createElement('button');
+                el.innerHTML = 0;
+                el.id = ""+j+""+i;
+                console.log(el.id)
+                el.style.backgroundColor = colors[j]
+                document.getElementById('main').appendChild(el);
+            }
+            document.getElementById('main').appendChild(document.createElement('br'))
+            for (i = 0; i < 5; i++) {
+                el = document.createElement('button');
+                el.innerHTML = j+1;
+                el.style.backgroundColor = colors[j]
+                document.getElementById('main').appendChild(el);
+            }
+            document.getElementById('main').appendChild(document.createElement('br'))
+            document.getElementById('main').appendChild(document.createElement('br'))
+
+        }
+    }
+</script>
+<style>
+    button {
+        width: 70;
+        height: 40;
+        border: none;
+    }
+</style>
