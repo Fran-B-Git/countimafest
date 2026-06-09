@@ -117,7 +117,7 @@
         }
 
         document.getElementById('export_this_bitch').onclick = () => {
-            const csv = counts.map(row => row.join(', ')).join('\n');
+            const csv = counts.map(row => row.join(',')).join('\n');
             log.innerHTML = csv.replace(/\n/g, '<br>') + '<br>' + log.innerHTML;
             copyToClipboard(csv);
         };
